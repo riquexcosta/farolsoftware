@@ -1,0 +1,589 @@
+// **************************************
+//
+//   #base.page
+//
+// **************************************
+
+@import "font-awesome"
+
+@font-face 
+	font-family: 'bommer_slab_roundedregular'
+	src: url('../fonts/BommerSlabRounded-Regular-webfont.eot')
+	src: url('../fonts/BommerSlabRounded-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('BommerSlabRounded-Regular-webfont.woff2') format('woff2'), url('BommerSlabRounded-Regular-webfont.woff') format('woff'), url('BommerSlabRounded-Regular-webfont.ttf') format('truetype'), url('BommerSlabRounded-Regular-webfont.svg#bommer_slab_roundedregular') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+
+$font: 'bommer_slab_roundedregular'
+
+$verde: rgba(28, 143, 65, 1)
+$amarelo: #F7FF00
+$vermelho: #db2626
+
+body
+	overflow: hidden
+
+html
+	font-family: $base-font-family
+	height: 2500px
+
+h1,h2,h3
+	font-family: $font
+
+
+.button
+	display: block
+	margin: 20px 50px
+	padding: 20px 10px
+	font-size: 20px
+	font-family: $font
+	+border-radius(10px)
+	text-decoration: none
+	text-align: center
+	+transition(0.3s ease-out)
+
+.portfolio, .sobre
+	.button
+		background: $vermelho
+		color: white
+
+		&:hover
+			background: darken($vermelho, 10%)
+
+
+
+.skills
+	.button
+		background: #141414
+		color: white
+
+		&:hover
+			background: lighten(#141414, 10%)
+
+header
+
+	.topheader
+		background: #141414
+		height: 45px
+		position: fixed
+		top: 0
+		width: 100%
+		z-index: 9999
+		ul
+			text-align: right
+			padding: 0
+			margin: 0
+			
+			li
+				display: inline-block
+				padding: 10px 5px
+				font-size: 20px
+				line-height: 25px
+				min-width: 40px
+				text-align: center
+
+				&:first-of-type
+					float: left
+					font-size: 30px
+				
+
+				&:hover
+					a
+						background: #000000
+						+transform(scale(1.3))
+
+						color: #FFF
+
+				a
+					color: white
+					text-decoration: none
+					display: block
+					width: 100%
+					+transition(0.3s ease-out)
+					+border-radius(3px)
+
+	.mobile-menu
+		position: fixed
+		left: -50%
+		width: 30%
+		+transition(0.3s ease-out)
+		height: 100%
+		background: #141414
+		top: 44px
+		z-index: 9999999
+
+		&.aberto
+			left: 0
+
+
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+
+			li
+				margin: 10px 0px
+				text-align: center
+
+			a
+				color: white
+				font-weight: bold
+				font-size: 20px
+				padding: 20px 10px
+				text-decoration: none
+				margin: 10px 0px
+				display: block
+
+				&:hover
+					background: #111
+
+
+
+section
+	padding: 130px 0px
+	h1
+		font-size: 70px
+		text-align: center
+		margin-bottom: 80px
+
+
+.banner
+	background: #ddd
+	height: 620px
+	padding-bottom: 0
+	background: url('../images/banner_site.jpg') center no-repeat
+	position: relative
+	width: 100%
+	overflow: hidden
+
+
+	// .semfundo
+	// 	background: url('../images/semfundo.png') center no-repeat
+	// 	background-position: 0px 100px
+	// 	height: 620px
+	// 	position: absolute
+	// 	width: 100%
+	// 	top: 0
+	// 	left: 0
+
+	.container
+		height: 100%
+		position: relative
+
+	
+
+	h1, h2
+		text-align: center
+		font-family: $font
+		font-weight: 300
+		z-index: 99999
+		color: black
+		span
+			
+			padding: 5px 10px
+			border-radius: 4px
+			webkit-border-radius: 4px
+
+	h2
+		font-weight: 300
+		font-size: 23px
+		letter-spacing: 10px
+		
+		span
+			color: black
+	
+	h1
+		font-size: 160px
+		margin-bottom: 20px
+		line-height: 0.7
+
+
+.sobre
+	+clearfix()
+
+	h1 
+		color: #000
+
+	
+	.photo
+		width: span(3)
+		float: left
+		text-align: center
+		margin-right: gutter()
+		.img-border
+			
+			max-height: 250px
+			overflow: hidden
+			width: 100%
+			max-width: 250px
+			margin: 0 auto
+			margin-bottom: 20px
+
+		p
+			
+
+			&.tel, &.mail
+				margin: 20px 20px
+				i
+					margin-right: 10px
+					+transition(0.3s ease-out)
+				
+				a
+					text-decoration: none
+					color: white
+					background: #333
+					padding: 5px
+					display: block
+					width: 100%
+					height: 100%
+					+border-radius(5px)
+					+transition(0.3s ease-out)
+
+					&:hover
+						background: $verde
+						i
+							+scale(1.3)
+
+		ul
+			display: block
+			margin: 0 auto
+
+			li
+				display: inline-block
+				border: 2px solid #333
+				text-align: center
+				padding: 0px 0px
+				font-size: 20px
+				+border-radius(5px)
+				min-width: 35px
+				margin: 5px
+				+transition(0.3s ease-out)
+
+				i
+					+transition(0.3s ease-out)
+
+				&:hover
+					background: $verde
+					border-color: $verde
+					i
+						+transform(rotate(360deg))
+						color: white
+				a
+					color: #333
+					width: 100%
+					display: block
+					height: 100%
+					pad
+
+		img
+			width: 100%
+
+	.text
+		width: span(8)
+		float: left
+		margin-left: gutter()
+		
+		h2
+			border-bottom: 1px solid #333
+			margin-bottom: 20px
+			padding-bottom: 20px
+		h2,h3
+			display: block
+
+		p
+			padding: 10px
+			font-size: 18px
+			line-height: 1.7
+			a
+				font-weight: bold
+				color: $verde
+				text-decoration: none
+
+		ul
+			list-style: none
+			margin: 0
+			+clearfix
+			li
+				float: left
+				margin: 20px 30px
+				padding: 0px 15px
+				height: 110px
+				line-height: 105px
+				color: white
+				min-width: 110px
+				background: $verde
+				text-align: center
+				+border-radius(110px)
+				font-weight: 600
+
+.skills
+	+clearfix()
+	background: #db2626
+
+	h1
+		color: white
+
+	ul
+		list-style: none
+		+clearfix()
+
+
+
+		li
+			width: span(3.85)
+			float: left
+			height: 450px
+			padding-top: 15px
+			text-align: center
+			background: #fff
+			margin: span(0.5)
+			color: #131313
+			+border-radius(10px)
+
+			h2
+				margin-top: 10px
+
+			p
+				padding: 15px
+
+.portfolio
+	+clearfix()
+	background: #fff
+
+	h1
+	
+		color: #000
+
+	ul
+		list-style: none
+		margin: 0
+		+clearfix()
+
+
+		li
+			width: span(2.90)
+			float: left
+			min-height: 150px
+			text-align: center
+			margin: span(0.5)
+			color: white
+			position: relative
+
+
+			&:hover
+				.hover
+					+opacity(1)
+					+transform(scale(1), rotate(0deg))
+
+
+
+			.hover
+				position: absolute
+				+opacity(0)
+				+transition(0.3s ease-out)
+				width: 100%
+				height: 100%
+				background: rgba(255,255,255,0.8)
+				+transform(scale(0.3), rotate(180deg))
+
+				h3
+					margin-top: 25px
+					margin-bottom: 25px
+					color: $vermelho
+
+				ul
+					margin-bottom: 10px
+
+
+				li
+					display: block
+					color: #333
+					float: none
+					min-height: 20px
+					width: 100%
+					font-weight: bold
+
+				p
+					padding: 10px
+					background: $vermelho
+					color: white
+		
+		
+.contato
+	+clearfix()
+	background: $vermelho
+	padding: 40px 0px
+
+	.container
+		position: relative
+
+
+	.coffee-img
+		width: 228px
+		height: 206px
+		background: url('../images/coffemini.png') no-repeat
+		position: absolute
+		top: 75px
+		right: 80px
+
+	h1
+
+		color: white
+		margin-bottom: 30px
+
+	p
+		text-align: center
+		width: 60%
+		margin: 0 auto
+		display: block
+		color: white
+		font-size: 18px
+		
+	form
+		width: 60%
+
+		margin: 0 auto
+		margin-top: 20px
+		display: block
+		z-index: 9999
+		input, label, textarea
+			display: block
+			width: 100%
+			height: 55px
+
+		div.error
+			color: #F6F500
+
+		input, textarea
+			border-radius: 4px
+			webkit-border-radius: 4px
+
+			&.error
+				border-color: #c82e15
+
+		
+			&:focus
+				border-color: $verde
+				outline: none
+
+		label
+			height: 30px
+			margin-top: 10px
+			font-weight: bold
+			color: white
+
+		textarea
+			height: 150px
+			resize: none
+
+		button
+			background: $verde
+			color: white
+			border: none
+			outline: none
+			font-weight: bold
+			padding: 15px 30px
+			font-size: 20px
+			margin: 10px 0px
+			float: right
+			border-radius: 5px
+			webkit-border-radius: 5px
+
+
++media-query(medium)
+	header .mobile-menu
+		width: 50%
+
+	.banner h1 
+		font-size: 150px
+
+	.banner h2
+		font-size: 20px
+
+	.skills ul
+		margin: 0
+		li
+			width: span(6)
+			margin: 0.4%
+			height: 400px
+
+	.portfolio
+		ul
+			li
+				width: span(6)
+				margin: 1% 0.4%
+				img
+					width: 100%
+
+
+	.sobre 
+		.photo 
+			width: span(12)
+
+		.text
+			width: span(12)
+
+
+
+
+
++media-query(small)
+	header .mobile-menu
+		width: 50%
+	.banner h1 
+		font-size: 130px
+
+	.banner h2
+		font-size: 18px
+
+	.sobre 
+		h1
+			font-size: 45px
+		.photo 
+			width: span(12)
+
+		.text
+			width: span(12)
+
+			.interesses
+				li
+					float: none
+					display: block
+					width: 200px
+					height: 200px
+					padding: 0
+					line-height: 200px
+					margin: 20px auto
+
+
+	.skills 
+		h1
+			font-size: 45px
+
+		ul
+			margin: 0
+			li
+				width: span(12)
+				margin: span(0.5) 0
+
+	.portfolio
+		h1
+			font-size: 45px
+		ul
+			li
+				width: span(12)
+				margin: 1% 0.4%
+				img
+					width: 100%
+
+
+	.contato
+		h1
+			font-size: 45px
+		form
+			width: 90%
+			
+		.coffee-img
+			display: none
+
