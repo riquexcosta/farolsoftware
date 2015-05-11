@@ -25,34 +25,6 @@ $(document).ready(function(){
 });
 
 
-	$('.link-sobre').click(function(){
-		event.preventDefault();
-		$('html, body').animate({
-	        scrollTop: $("#sobre").offset().top
-	    }, 500);
-	});
-
-	$('.link-servicos').click(function(){
-		event.preventDefault();
-		$('html, body').animate({
-	        scrollTop: $("#skills").offset().top
-	    }, 500);
-	});
-
-	$('.link-contato').click(function(){
-		event.preventDefault();
-		$('html, body').animate({
-	        scrollTop: $("#contato").offset().top
-	    }, 500);
-	});
-
-	$('.link-portifolio').click(function(){
-		event.preventDefault();
-		$('html, body').animate({
-	        scrollTop: $("#portifolio").offset().top
-	    }, 500);
-	});
-
 	$('#form-contato').validate({
 		submitHandler: function(form) {
 
@@ -66,7 +38,7 @@ $(document).ready(function(){
 
 			$.ajax({
 				type: "POST",
-				url: "http://www.rique.co/enviar-email.php",
+				url: "http://www.rique.co/enviar-email-farol.php",
 				data: {
 					nome:nome,
 					email:email,
@@ -77,7 +49,7 @@ $(document).ready(function(){
 				success:function(response){
 					
 					$('#form-contato input, #form-contato textarea').val('');
-					$('#form-contato button[type="submit"]').html('Enviado com sucesso!').after('<h3 style="color: #1c8f41">Obrigado, logo mais retornarei o seu contato.</h3>');
+					$('#form-contato button[type="submit"]').html('Enviado com sucesso!').after('<h3 style="color: #1c8f41">Obrigado, logo mais retornaremos o seu contato.</h3>');
 				}
 			});		
 			return false;
@@ -86,12 +58,12 @@ $(document).ready(function(){
 
 });
 
-$(document).scroll(function(){
+// $(document).scroll(function(){
 
-	var position = $(document).scrollTop();
-	var altura = 100;
-	if (position > 0 && position < 620){
-		altura = altura-position*0.8;
-		$('.semfundo').css('background-position','0px '+altura+'px')
-	}
-});
+// 	var position = $(document).scrollTop();
+// 	var altura = 100;
+// 	if (position > 0 && position < 620){
+// 		altura = altura-position*0.8;
+// 		$('.semfundo').css('background-position','0px '+altura+'px')
+// 	}
+// });
