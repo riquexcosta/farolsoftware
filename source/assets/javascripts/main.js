@@ -73,11 +73,11 @@ $(document).ready(function(){
 					telefone:telefone,
 					mensagem: mensagem
 				},
-				dataType: 'JSON',
+				dataType: 'JSONP',
 				success:function(response){
 					
 					$('#form-contato input, #form-contato textarea').val('');
-					$('#form-contato button[type="submit"]').html('Enviado com sucesso!').after('<h3 style="color: #1c8f41">Obrigado, logo mais retornarei o seu contato.</h3>');
+					$('#form-contato button[type="submit"]').html('Enviado com sucesso!').after('<h3 style="color: #fff">Obrigado, logo mais retornaremos o seu contato.</h3>');
 				}
 			});		
 			return false;
