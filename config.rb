@@ -2,6 +2,8 @@
 # http://localhost:4567/__middleman/config/
 
 
+page "/case/*", :layout => "case"
+
 # Site Settings
 # ----------------------------------------------
 @google_analytics = ''

@@ -32,10 +32,10 @@ section.sobre#sobre
 					|   (61) 8467 1665
 
 			
-			ul
-				li
-					a href="http://www.facebook.com/riquegonsalves" target="_blank"
-						i.fa-facebook.fa
+			/ ul
+			/ 	li
+			/ 		a href="http://www.facebook.com/riquegonsalves" target="_blank"
+			/ 			i.fa-facebook.fa
 				
 		.text
 			p  
@@ -54,32 +54,32 @@ section.skills#skills
 
 		ul
 			li 
-				img src="assets/images/skills/frontend.png" alt=""/
+				img src="assets/images/website.png" alt=""/
 				h2 Website
 				p Nós planejamos e criamos o seu website ou da sua empresa, além de otimizá-lo para dispositivos móveis e para que ele tenha um ótimo posicionamento nos motores de busca!
 			
 			li 
-				img src="assets/images/skills/backend.png" alt=""/
+				img src="assets/images/app_web_mobile.png" alt=""/
 				h2 Aplicativos Web/Mobile
 				p Sabia que o nosso futuro está intimamente ligado à tecnologia móvel? Nós criamos o seu aplicativo para iphone e android, voltado para os seus objetivos, do seu jeito!
 
 
 			li 
-				img src="assets/images/skills/responsive.png" alt=""/
+				img src="assets/images/automacao.png" alt=""/
 				h2 Automação empresarial
 				p Precisa de Sistema de Gestão, Intranet, controle de estoque ou qualquer outro tipo de automação na sua empresa? Pode contar conosco para resolver o seu problema!
 
 
 			li 
-				img src="assets/images/skills/ux.png" alt=""/
+				img src="assets/images/ecommerce.png" alt=""/
 				h2 E-Commerce
 				p Quer vender pela internet? A gente monta a sua loja online, com a sua cara e de acordo com as suas necessidades logísticas!
 
 
 			li 
-				img src="assets/images/skills/seo.png" alt=""/
+				img src="assets/images/fabrica_ideias.png" alt=""/
 				h2 
-					| Fabríca de Idéias 
+					| Fábrica de Idéias 
 				p Tem uma ideia de negócio na internet? Nós te ajudamos a planejá-la e colocá-la em prática!
 			
 
@@ -103,126 +103,6 @@ section.skills#skills
 
 			
 
-	
-
-section.portfolio#portifolio
-	.container
-		h1 Portfólio
-
-		ul
-			li
-				a href="http://www.agencialooknfeel.com.br" target="_blank"
-					.hover 
-						h3 Agencia Look'n Feel
-						ul
-							li Parceria: Look'n Feel
-							li Wireframe
-							li Front-end Responsivo
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/lnf.jpg" alt=""/
-
-			li
-				a href="http://www.gourmetbutler.com.br" target="_blank"
-					.hover 
-						h3 Gourmet Butler
-						ul
-							li Parceria: Look'n Feel
-							li Front-end
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/gb.jpg" alt=""/
-
-			li
-				a href="http://www.tatue.vc" target="_blank"
-					.hover 
-						h3 Tatue.vc
-						ul
-							li Front-end
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/tatue.jpg" alt=""/
-
-			li
-				a href="http://www.beiramarimoveis.com.br" target="_blank"
-					.hover 
-						h3 Beiramar Imóveis
-						ul
-							li Parceria: Look'n Feel
-							li Front-end
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/beiramar.jpg" alt=""/
-
-			li
-				a href="http://www.snscs.adv.br" target="_blank"
-					.hover 
-						h3 SNSCS
-						ul
-							li Parceria: Look'n Feel
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/snscs.jpg" alt=""/
-
-			li
-				a href="http://www.snc-asasul.com.br" target="_blank"
-					.hover 
-						h3 SNC Brasília
-						ul
-							li Parceria: Look'n Feel
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/snc.jpg" alt=""/
-
-			li
-				a href="http://www.ikhon.com.br" target="_blank"
-					.hover 
-						h3 IKHON
-						ul
-							li Parceria: Look'n Feel
-							li Front-end
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/ikhon.jpg" alt=""/
-
-			li
-				a href="http://www.abralatas.org" target="_blank"
-					.hover 
-						h3 Abralatas
-						ul
-							li Parceria: Look'n Feel
-							li Front-end
-							li Wordpress
-
-						p Clique para visitar o site
-					img src="assets/images/portfolio/abralatas.jpg" alt=""/
-
-		a class="button link-contato" href="#"
-				| Deseja aparecer aqui também? Entre em contato!
+= partial 'portifolio'
+= partial 'contato'
 			
-
-section.contato#contato
-	.container
-		h1 Entre em contato
-
-		p
-			| E então? Podemos te ajudar de alguma maneira? Tem alguma dúvida? Entre em contato conosco! Te responderemos dentro do prazo de 24h.
-
-
-		form id="form-contato" action=""
-			label for="nome" Nome *
-			input required="" type="text" name="nome"/
-			label for="email" E-mail *
-			input required="" type="email" name="email"/
-			label for="telefone" Telefone
-			input required="" type="phone" name="telefone"/
-			label for="mensagem" Mensagem *
-			textarea name="mensagem"
-			button type="submit" Enviar
