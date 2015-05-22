@@ -9,7 +9,7 @@ def page_title
 end
 
 def page_description
-  description = "description" # Set site description here
+  description = "Conheça os serviços que nós oferecemos!" # Set site description here
 
   if data.page.description
     description = data.page.description
@@ -19,7 +19,7 @@ def page_description
 end
 
 def page_keywords
-  keywords = [] # Set site keywords here ['keyword-a', 'keyword-b']
+  keywords = ['apps', 'website', 'site', 'mobile', 'seo', 'responsive'] # Set site keywords here ['keyword-a', 'keyword-b']
 
   if data.page.keywords
     keywords.concat(data.page.keywords)
